@@ -3,6 +3,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 5px;
+
 }
 
 .meta {
@@ -27,7 +28,7 @@ body {
 }
 
 .supplier {
-  color: #4682B4;
+  color: #4682b4;
   display: block;
 }
 
@@ -36,24 +37,48 @@ body {
   display: block;
 }
 
-.client, .items, .summary {
+ .les_references,
+.destinataire,
+.items,
+.summary {
   padding: 1px;
   margin-top: 1em;
   margin-bottom: 1em;
-  background: #ff8000;
+  background: #d87a1d;
   -webkit-print-color-adjust: exact !important;
   color-adjust: exact !important;
+  //width: 30%;
+  //float: right;
 }
 
-.client .title, .summary .title {
+ .les_references, 
+ .expediteur {
+ padding: 1px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 2%;
+  background: #d87a1d;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  //width: 30%;
+  //float: left;
+}
+
+ .les_references .title,
+.destinataire .title,
+.expediteur .title,
+.summary .title {
   margin-left: 4px;
   color: white;
   text-transform: uppercase;
 }
 
-.client .details, .summary .details {
+.les_references .details,
+.destinataire .details,
+.expediteur .details,
+.summary .details {
   padding: 4px;
-  background-color: var(--grist-theme-page-panels-main-panel-bg, white);
+  background-color: white;
 }
 
 table.items {
@@ -75,12 +100,18 @@ table.items td {
   padding: 4px;
 }
 
-.client .title, .summary .title, table.items th, .help .title {
+ .les_references .title,
+.destinataire .title,
+.expediteur .title,
+.summary .title,
+table.items th,
+.help .title {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.money, .number {
+.money,
+.number {
   text-align: right;
 }
 
@@ -111,7 +142,8 @@ div.summary {
   align-items: flex-end;
 }
 
-div.summary .part, div.summary .total {
+div.summary .part,
+div.summary .total {
   padding: 10px;
 }
 
@@ -137,12 +169,13 @@ div.summary .total {
   border-bottom-right-radius: 0.5em;
 }
 
-div.summary .title, div.summary .details {
+div.summary .title,
+div.summary .details {
   text-align: right;
 }
 
 div.summary::after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -154,16 +187,18 @@ div.summary::after {
 
 .email::before {
   content: "\2709";
-  margin-right: 0.5em;  
+  margin-right: 0.5em;
 }
 
 .thanks {
   text-align: right;
-  color: #C83200;
+  color: #c83200;
   font-size: 200%;
 }
 
-div.instructions, .newlined, p.note {
+div.instructions,
+.newlined,
+p.note {
   white-space: pre-line;
 }
 
@@ -184,9 +219,9 @@ div.print {
 }
 
 div.print a {
-  background: #C83200;
+  background: #c83200;
   display: block;
-  font-size: 200%;
+  font-size: 100%;
   color: white;
   text-decoration: none;
   padding: 0.25em;
@@ -197,7 +232,7 @@ div.print a {
 }
 
 div.print a:hover {
-  background: #4682B4;
+  background: #4682b4;
 }
 
 .done {
