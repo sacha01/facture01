@@ -29,12 +29,12 @@ function addDemo(row) {
       Website: 'Invoicer.Website'
     }
   }
-  if (!row.Client) {
-    row.Client = {
-      Name: 'Client.Name',
-      Street1: 'Client.Street1',
-      Street2: 'Client.Street2',
-      City: 'Client.City',
+  if (!row.Destinataire) {
+    row.Destinataire = {
+      Name: 'Destinataire.Name',
+      Street1: 'Destinataire.Street1',
+      Street2: 'Destinataire.Street2',
+      City: 'Destinataire.City',
       State: '.State',
       Zip: '.Zip'
     }
@@ -151,7 +151,7 @@ function updateInvoice(row) {
     // Add some guidance about columns.
     const want = new Set(Object.keys(addDemo({})));
     const accepted = new Set(['References']);
-    const importance = ['Number', 'Client', 'Items', 'Total', 'Invoicer', 'Due', 'Issued', 'Subtotal', 'Deduction', 'Taxes', 'Note'];
+    const importance = ['Number', 'Destinataire', 'Items', 'Total', 'Invoicer', 'Due', 'Issued', 'Subtotal', 'Deduction', 'Taxes', 'Note'];
     if (!(row.Due || row.Issued)) {
       const seen = new Set(Object.keys(row).filter(k => k !== 'id' && k !== '_error_'));
       const help = row.Help = {};
